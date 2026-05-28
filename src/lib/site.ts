@@ -1,8 +1,8 @@
 export const site = {
-  name: "Maya Chen",
+  name: "Cynthia Fung Sze Yan",
   title: "Product & UI/UX Designer",
   tagline: "Crafting calm, human-centred digital experiences.",
-  email: "hello@mayachen.design",
+  email: "halo_cynthia@yahoo.com.hk",
   location: "Hong Kong",
   year: new Date().getFullYear(),
 } as const;

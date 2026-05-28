@@ -52,7 +52,7 @@ export const privacySections: LegalSection[] = [
     id: "controller",
     title: "1. Who we are",
     paragraphs: [
-      "This Site is operated by Maya Chen, an independent UI/UX designer based in Hong Kong (“we”, “us”). For privacy enquiries, email hello@mayachen.design.",
+      "This Site is operated by Cynthia Fung Sze Yan, an independent UI/UX designer based in Hong Kong (“we”, “us”). For privacy enquiries, email halo_cynthia@yahoo.com.hk.",
     ],
   },
   {
