@@ -5,12 +5,20 @@ export function Footer() {
   return (
     <footer className="border-t border-border bg-surface-elevated">
       <div className="mx-auto max-w-6xl px-6 py-14">
+        <div className="mb-12 rounded-2xl border border-border bg-surface p-6 md:p-8">
+          <p className="text-xs font-medium uppercase tracking-[0.2em] text-ink-faint">
+            Final CTA
+          </p>
+          <p className="mt-3 font-display text-xl font-semibold text-ink md:text-2xl">
+            從港鐵乘客、自閉症兒童到家裡那隻貓，沒有我讀不懂的用戶需求。
+          </p>
+        </div>
         <div className="grid gap-10 md:grid-cols-[1.5fr_1fr_1fr]">
           <div>
             <p className="font-display text-xl font-semibold text-ink">{site.name}</p>
             <p className="mt-2 max-w-xs text-sm leading-relaxed text-ink-muted">
-              {site.title} based in {site.location}. Available for product design
-              engagements and design leadership roles.
+              {site.title} based in {site.location}. Focused on “{site.tagline}”—connecting
+              people (and animals) through thoughtful experiences.
             </p>
             <a
               href={`mailto:${site.email}`}

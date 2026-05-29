@@ -1,7 +1,7 @@
 export const site = {
   name: "Cynthia Fung Sze Yan",
-  title: "Product & UI/UX Designer",
-  tagline: "Crafting calm, human-centred digital experiences.",
+  title: "多維體驗架構師",
+  tagline: "連結與療癒",
   email: "halo_cynthia@yahoo.com.hk",
   location: "Hong Kong",
   year: new Date().getFullYear(),
@@ -23,18 +23,20 @@ export const footerLinks = {
 
 export const services = [
   {
-    title: "Product strategy",
+    title: "個人成長與探索服務",
     description:
-      "Aligning business goals with user needs through research, journey mapping, and prioritised roadmaps.",
+      "以科學及心理學打底，用占星挖掘天賦與盲點，利用NLP 執行改變，療癒心靈。",
+ 
   },
   {
-    title: "UI & interaction",
+    title: "設計與內容呈現",
     description:
-      "Scalable design systems, responsive layouts, and micro-interactions that feel intentional—not decorative.",
+      "提供美觀且符合品牌調性的設計與內容呈現，幫助你更好地展現品牌價值與故事。",
   },
   {
-    title: "Prototyping & testing",
+    title: "教育支援",
     description:
-      "High-fidelity prototypes and moderated usability sessions to validate ideas before engineering spend.",
+      "用教育陪孩子找到適合自己的節奏，在教學的同時，也為家長提供情緒支持與親子溝通協助。",
+ 
   },
 ] as const;

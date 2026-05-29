@@ -36,7 +36,7 @@ export default function ContactPage() {
               </p>
               <p className="mt-2 text-lg text-ink">{site.location}</p>
               <p className="mt-1 text-sm text-ink-muted">
-                Open to remote collaboration across APAC and EU time zones.
+                Open to remote collaboration across Hong Kong and China time zones.
               </p>
             </div>
             <div>

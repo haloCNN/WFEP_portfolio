@@ -16,14 +16,13 @@ export default function HomePage() {
         <div className="relative mx-auto max-w-6xl">
           <p className="inline-flex items-center gap-2 rounded-full border border-border bg-surface-elevated px-4 py-1.5 text-xs font-medium text-ink-muted">
             <span className="h-1.5 w-1.5 rounded-full bg-accent" />
-            Open for Q3 2026 engagements
+            連結與療癒 · Modern Healing
           </p>
           <h1 className="mt-8 max-w-4xl font-display text-[2.75rem] font-semibold leading-[1.05] tracking-tight text-ink text-balance sm:text-5xl md:text-6xl lg:text-7xl">
-            {site.tagline}
+            如果 AI 要取代人類，我大概是最後一個。因為它很難同時學會寫 Code、讀星盤，唱歌演戲和跟小孩與毛孩聊天。
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink-muted md:text-xl">
-            I&apos;m {site.name}, a {site.title.toLowerCase()} in {site.location}. I
-            partner with product teams to turn research into interfaces people trust.
+            我是馮詩恩。一位融合科學邏輯、玄學、應用心理學洞察與 UI/UX 設計能力的體驗架構師。專注於為創新品牌提供具備情緒價值的產品與服務方案。
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <Button href="/projects">View work</Button>
@@ -33,9 +32,9 @@ export default function HomePage() {
           </div>
           <dl className="mt-16 grid grid-cols-2 gap-8 border-t border-border pt-10 sm:grid-cols-4">
             {[
-              { label: "Years in product", value: "8+" },
-              { label: "Shipped products", value: "24" },
-              { label: "Industries", value: "6" },
+              { label: "核心訊息", value: site.tagline },
+              { label: "核心優勢", value: "共情 × 理性" },
+              { label: "斜槓身份", value: "多潛力" },
               { label: "Based in", value: site.location },
             ].map((stat) => (
               <div key={stat.label}>
@@ -86,11 +85,10 @@ export default function HomePage() {
               Collaboration
             </p>
             <h2 className="mt-4 font-display text-3xl font-semibold tracking-tight md:text-4xl">
-              Have a product challenge worth solving?
+              從港鐵乘客、自閉症兒童到家裡那隻貓，沒有我讀不懂的用戶需求。
             </h2>
             <p className="mt-4 text-lg leading-relaxed text-surface/75">
-              Tell me about your team, timeline, and users. I typically reply within
-              two business days.
+              想一起把混亂的需求梳理成清晰的體驗？告訴我你的情境、使用者與目標，我會回覆你下一步怎麼走。
             </p>
             <div className="mt-8">
               <Button

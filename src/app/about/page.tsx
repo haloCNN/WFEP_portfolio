@@ -10,24 +10,24 @@ export const metadata: Metadata = {
 
 const timeline = [
   {
-    year: "2025 — Present",
-    title: "Independent product designer",
-    detail: "Partnering with startups and scale-ups on 0→1 and redesign initiatives.",
+    year: "2023 — Present",
+    title: "Customer Service Centre Assistant · MTR Corporation",
+    detail: "Frontline support for daily operations at Hong Kong’s largest transport network, with a focus on passenger experience and problem solving.",
   },
   {
-    year: "2021 — 2025",
-    title: "Senior designer · Fintech collective",
-    detail: "Led mobile banking and payments experiences for APAC markets.",
+    year: "2019 — 2023",
+    title: "Freelance Private Tutor",
+    detail: "Provided one-on-one tutoring for a foreign student with special educational needs (SEN), tailoring learning strategies to support personal growth and academic development.",
   },
   {
-    year: "2018 — 2021",
-    title: "UI/UX designer · Agency studio",
-    detail: "Delivered brand and product work for retail, travel, and SaaS clients.",
+    year: "2016 — 2017",
+    title: "Teaching Assistant · SEN student",
+    detail: "Supported a student with special educational needs (SEN), adapting teaching methods and providing individualized guidance in academic and daily tasks.",
   },
   {
-    year: "2016",
-    title: "BDes · Communication design",
-    detail: "Foundation in typography, systems thinking, and human-centred methods.",
+    year: "2015 — 2016",
+    title: "Health Education Officer",
+    detail: "Promoted wellness and public health through campaigns, workshops, and personalized guidance; collaborated with teams to create accessible educational resources.",
   },
 ];
 
@@ -52,7 +52,8 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About"
         title={`Hi, I'm ${site.name.split(" ")[0]}.`}
-        description={`I'm a ${site.title.toLowerCase()} who cares about the small moments—loading states, error copy, and the first screen someone sees after signing up.`}
+        description="擁有工程師的腦，藝術家的心，占星師的直覺，還有一顆永遠好奇、永遠想嘗試新身份的靈魂。"
+   
       />
 
       <section className="px-6 py-16 md:py-24">
@@ -67,21 +68,20 @@ export default function AboutPage() {
           />
           <div className="max-w-2xl space-y-6 text-lg leading-relaxed text-ink-muted">
             <p>
-              Over eight years I&apos;ve worked across discovery workshops, design systems,
-              and high-fidelity prototyping—often embedded with product and engineering
-              from day one.
+              我的構造可能有點特別：腦子裝著『生醫工程與環境科學』的理科魂、把關安全的『職安健教育主任』，以及看透人心的『應用心理學與NLP教練』資格；內心則住著感性的『音樂劇演員』、神秘的『占星師』與『動物傳心師』，還有充滿愛心的『SEN兒童導師』。
+         
             </p>
             <p>
-              My process usually starts with understanding jobs-to-be-done and success
-              metrics, then moves into journey maps, wireframes, and iterative testing.
-              I prototype in Figma and collaborate in Notion, Linear, and Storybook.
+               你問我現在主要在做什麼？我目前正戴著『客戶服務助理』和『菜鳥UI設計師』的帽子，偶爾兼職做個美感爆棚的『海報與PPT設計師』。
+         
+        
             </p>
             <p>
-              Outside client work I mentor early-career designers and speak at local
-              meetups on accessible interaction patterns.
+              從科學到玄學，從人類到動物，從理智到藝術，認識我一個，等於認識了一個團隊！
+         
             </p>
             <Button href="/contact" className="!mt-4">
-              Work with me
+              聯絡我
             </Button>
           </div>
         </div>
@@ -125,8 +125,7 @@ export default function AboutPage() {
         <div className="mx-auto max-w-6xl rounded-2xl border border-border p-8 md:p-10">
           <h2 className="font-display text-xl font-semibold text-ink">Toolbox</h2>
           <p className="mt-4 text-ink-muted">
-            Figma · FigJam · Principle · Maze · Notion · Linear · HTML/CSS literacy for
-            handoff · WCAG 2.2 awareness
+            Figma · Cursor · Canva · Blender · PowerPoint 
           </p>
         </div>
       </section>
