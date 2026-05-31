@@ -18,13 +18,21 @@ export function PageHero({
   return (
     <section
       className={cn(
-        "border-b border-border bg-surface-elevated px-6 py-16 md:py-24",
+        "relative overflow-hidden border-b border-border bg-surface-elevated px-6 py-16 md:py-24",
         className,
       )}
     >
-      <div className="mx-auto max-w-6xl">
+      <div
+        className="pointer-events-none absolute -right-20 top-0 h-64 w-64 rounded-full opacity-40 blur-3xl"
+        style={{
+          background:
+            "radial-gradient(circle, color-mix(in srgb, var(--color-accent-secondary) 35%, transparent), transparent 70%)",
+        }}
+        aria-hidden
+      />
+      <div className="relative mx-auto max-w-6xl">
         {eyebrow && (
-          <p className="text-xs font-medium uppercase tracking-[0.2em] text-ink-faint">
+          <p className="text-xs font-medium uppercase tracking-[0.2em] text-accent">
             {eyebrow}
           </p>
         )}

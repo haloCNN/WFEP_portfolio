@@ -7,15 +7,29 @@ export default function HomePage() {
     <>
       <section className="relative overflow-hidden px-6 pb-20 pt-12 md:pb-28 md:pt-20">
         <div
-          className="pointer-events-none absolute -right-32 top-0 h-[480px] w-[480px] rounded-full opacity-40 blur-3xl"
+          className="pointer-events-none absolute -right-32 top-0 h-[480px] w-[480px] rounded-full opacity-50 blur-3xl"
           style={{
             background:
-              "radial-gradient(circle, color-mix(in srgb, var(--color-accent) 35%, transparent), transparent 70%)",
+              "radial-gradient(circle, color-mix(in srgb, var(--color-accent) 45%, transparent), transparent 70%)",
+          }}
+        />
+        <div
+          className="pointer-events-none absolute -left-24 top-32 h-[360px] w-[360px] rounded-full opacity-40 blur-3xl"
+          style={{
+            background:
+              "radial-gradient(circle, color-mix(in srgb, var(--color-accent-secondary) 40%, transparent), transparent 70%)",
+          }}
+        />
+        <div
+          className="pointer-events-none absolute bottom-0 right-1/4 h-[280px] w-[280px] rounded-full opacity-35 blur-3xl"
+          style={{
+            background:
+              "radial-gradient(circle, color-mix(in srgb, var(--color-accent-tertiary) 45%, transparent), transparent 70%)",
           }}
         />
         <div className="relative mx-auto max-w-6xl">
-          <p className="inline-flex items-center gap-2 rounded-full border border-border bg-surface-elevated px-4 py-1.5 text-xs font-medium text-ink-muted">
-            <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+          <p className="inline-flex items-center gap-2 rounded-full border border-accent/20 bg-accent-soft px-4 py-1.5 text-xs font-medium text-accent">
+            <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-accent" />
             連結與療癒 · Modern Healing
           </p>
           <h1 className="mt-8 max-w-4xl font-display text-[2.75rem] font-semibold leading-[1.05] tracking-tight text-ink text-balance sm:text-5xl md:text-6xl lg:text-7xl">
@@ -41,7 +55,7 @@ export default function HomePage() {
                 <dt className="text-xs uppercase tracking-[0.15em] text-ink-faint">
                   {stat.label}
                 </dt>
-                <dd className="mt-2 font-display text-2xl font-semibold text-ink">
+                <dd className="mt-2 font-display text-2xl font-semibold gradient-brand-text">
                   {stat.value}
                 </dd>
               </div>
@@ -58,12 +72,18 @@ export default function HomePage() {
             description="From discovery to polished UI—embedded with your squad or leading design workstreams."
           />
           <ul className="mt-14 grid gap-8 md:grid-cols-3">
-            {services.map((service, i) => (
+            {services.map((service, i) => {
+              const accents = [
+                { num: "text-accent", bg: "bg-accent-soft", border: "border-accent/15" },
+                { num: "text-accent-secondary", bg: "bg-accent-soft-secondary", border: "border-accent-secondary/15" },
+                { num: "text-accent-tertiary", bg: "bg-accent-soft-tertiary", border: "border-accent-tertiary/15" },
+              ][i % 3];
+              return (
               <li
                 key={service.title}
-                className="rounded-2xl border border-border bg-surface p-8"
+                className={`rounded-2xl border ${accents.border} ${accents.bg} p-8 transition-shadow hover:shadow-md`}
               >
-                <span className="font-display text-sm font-semibold text-accent">
+                <span className={`font-display text-sm font-semibold ${accents.num}`}>
                   0{i + 1}
                 </span>
                 <h3 className="mt-4 font-display text-xl font-semibold text-ink">
@@ -73,21 +93,22 @@ export default function HomePage() {
                   {service.description}
                 </p>
               </li>
-            ))}
+            );
+            })}
           </ul>
         </div>
       </section>
 
       <section className="px-6 py-20 md:py-28">
-        <div className="mx-auto max-w-6xl rounded-3xl bg-ink px-8 py-14 text-surface md:px-14 md:py-20">
+        <div className="mx-auto max-w-6xl overflow-hidden rounded-3xl gradient-brand px-8 py-14 text-white shadow-xl shadow-accent/20 md:px-14 md:py-20">
           <div className="max-w-2xl">
-            <p className="text-xs font-medium uppercase tracking-[0.2em] text-surface/60">
+            <p className="text-xs font-medium uppercase tracking-[0.2em] text-white/70">
               Collaboration
             </p>
             <h2 className="mt-4 font-display text-3xl font-semibold tracking-tight md:text-4xl">
               從港鐵乘客、自閉症兒童到家裡那隻貓，沒有我讀不懂的用戶需求。
             </h2>
-            <p className="mt-4 text-lg leading-relaxed text-surface/75">
+            <p className="mt-4 text-lg leading-relaxed text-white/85">
               想一起把混亂的需求梳理成清晰的體驗？告訴我你的情境、使用者與目標，我會回覆你下一步怎麼走。
             </p>
             <div className="mt-8">

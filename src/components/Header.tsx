@@ -37,7 +37,7 @@ export function Header() {
           className="font-display text-lg font-semibold tracking-tight text-ink"
         >
           {site.name.split(" ")[0]}
-          <span className="text-ink-faint">.</span>
+          <span className="text-accent">.</span>
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex" aria-label="Main">
@@ -48,8 +48,8 @@ export function Header() {
               className={cn(
                 "text-sm transition-colors",
                 pathname === link.href || pathname.startsWith(`${link.href}/`)
-                  ? "font-medium text-ink"
-                  : "text-ink-muted hover:text-ink",
+                  ? "font-medium text-accent"
+                  : "text-ink-muted hover:text-accent",
               )}
             >
               {link.label}
@@ -57,7 +57,7 @@ export function Header() {
           ))}
           <Link
             href="/contact"
-            className="rounded-full bg-ink px-5 py-2 text-sm font-medium text-surface transition-colors hover:bg-ink/90"
+            className="gradient-brand rounded-full px-5 py-2 text-sm font-medium text-white shadow-sm shadow-accent/20 transition-opacity hover:opacity-90"
           >
             Let&apos;s talk
           </Link>
@@ -101,7 +101,7 @@ export function Header() {
             <li>
               <Link
                 href="/contact"
-                className="inline-block rounded-full bg-ink px-5 py-2.5 text-sm font-medium text-surface"
+                className="gradient-brand inline-block rounded-full px-5 py-2.5 text-sm font-medium text-white"
               >
                 Let&apos;s talk
               </Link>

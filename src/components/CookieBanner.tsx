@@ -53,7 +53,7 @@ export function CookieBanner() {
         <button
           type="button"
           onClick={() => save("all")}
-          className="rounded-full bg-ink px-4 py-2 text-sm font-medium text-surface transition-colors hover:bg-ink/90"
+          className="gradient-brand rounded-full px-4 py-2 text-sm font-medium text-white transition-opacity hover:opacity-90"
         >
           Accept all
         </button>

@@ -11,10 +11,10 @@ type ButtonProps = {
 
 const variants = {
   primary:
-    "bg-ink text-surface hover:bg-ink/90 shadow-sm",
+    "gradient-brand text-white shadow-md shadow-accent/25 hover:opacity-90",
   secondary:
-    "bg-surface-elevated text-ink border border-border hover:border-ink/20",
-  ghost: "text-ink-muted hover:text-ink underline-offset-4 hover:underline",
+    "bg-surface-elevated text-ink border border-border hover:border-accent/40 hover:text-accent",
+  ghost: "text-accent hover:text-accent-secondary underline-offset-4 hover:underline",
 };
 
 export function Button({

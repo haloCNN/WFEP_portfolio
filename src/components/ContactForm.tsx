@@ -84,7 +84,7 @@ export function ContactForm() {
       </p>
       <button
         type="submit"
-        className="mt-6 w-full rounded-full bg-ink py-3.5 text-sm font-medium text-surface transition-colors hover:bg-ink/90 sm:w-auto sm:px-8"
+        className="gradient-brand mt-6 w-full rounded-full py-3.5 text-sm font-medium text-white transition-opacity hover:opacity-90 sm:w-auto sm:px-8"
       >
         Send message
       </button>

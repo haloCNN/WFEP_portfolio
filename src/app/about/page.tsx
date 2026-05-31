@@ -33,16 +33,16 @@ const timeline = [
 
 const principles = [
   {
-    title: "Clarity over novelty",
-    body: "Interfaces should reduce cognitive load. Distinctive design comes from hierarchy and restraint, not decoration for its own sake.",
+    title: "以認知共鳴取代裝飾",
+    body: "運用心理學與包容性思維，將複雜資訊轉為清晰、易用的體驗，令用戶快速抓住重點。",
   },
   {
-    title: "Evidence-led decisions",
-    body: "Qualitative insight and quantitative signals inform priorities. I document trade-offs so teams can align quickly.",
+    title: "數據為骨，人性為肉",
+    body: "定性洞察與定量數據共同驅動決策，知其然也知其所以然，團隊快速對齊的同時，踏出的每一步也更有人情味。",
   },
   {
-    title: "Systems that scale",
-    body: "Tokens, components, and content patterns help engineering ship faster without visual drift.",
+    title: "會說故事的系統",
+    body: "好的系統像說書人，讓每個畫面、元件、流程都能說出自己的故事，在系統化之外加入「敘事與表達彈性」，將複雜轉為清晰。",
   },
 ];
 
@@ -62,7 +62,7 @@ export default function AboutPage() {
             className="aspect-[4/5] max-w-sm rounded-2xl border border-border lg:max-w-none"
             style={{
               background:
-                "linear-gradient(160deg, var(--color-accent-soft), var(--color-surface))",
+                "linear-gradient(160deg, var(--color-accent-soft), var(--color-accent-soft-secondary), var(--color-accent-soft-tertiary))",
             }}
             aria-hidden
           />
@@ -89,14 +89,23 @@ export default function AboutPage() {
 
       <section className="border-y border-border bg-surface-elevated px-6 py-16 md:py-24">
         <div className="mx-auto max-w-6xl">
-          <h2 className="font-display text-3xl font-semibold text-ink">Design principles</h2>
+          <h2 className="font-display text-3xl font-semibold text-ink">How I Work</h2>
+     
           <ul className="mt-12 grid gap-8 md:grid-cols-3">
-            {principles.map((p) => (
-              <li key={p.title} className="rounded-2xl border border-border bg-surface p-8">
+            {principles.map((p, i) => {
+              const styles = [
+                { bg: "bg-accent-soft", border: "border-accent/20", dot: "border-accent" },
+                { bg: "bg-accent-soft-secondary", border: "border-accent-secondary/20", dot: "border-accent-secondary" },
+                { bg: "bg-accent-soft-tertiary", border: "border-accent-tertiary/20", dot: "border-accent-tertiary" },
+              ][i % 3];
+              return (
+              <li key={p.title} className={`rounded-2xl border ${styles.border} ${styles.bg} p-8`}>
+                <span className={`mb-4 inline-block h-2 w-2 rounded-full border-2 ${styles.dot} bg-surface-elevated`} />
                 <h3 className="font-display text-lg font-semibold text-ink">{p.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-ink-muted">{p.body}</p>
               </li>
-            ))}
+            );
+            })}
           </ul>
         </div>
       </section>
@@ -122,7 +131,7 @@ export default function AboutPage() {
       </section>
 
       <section className="px-6 pb-20">
-        <div className="mx-auto max-w-6xl rounded-2xl border border-border p-8 md:p-10">
+        <div className="mx-auto max-w-6xl rounded-2xl border border-accent-secondary/20 bg-accent-soft-secondary p-8 md:p-10">
           <h2 className="font-display text-xl font-semibold text-ink">Toolbox</h2>
           <p className="mt-4 text-ink-muted">
             Figma · Cursor · Canva · Blender · PowerPoint 

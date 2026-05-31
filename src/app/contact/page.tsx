@@ -5,7 +5,7 @@ import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: `Get in touch with ${site.name} for product design collaborations.`,
+  description: `Get in touch with ${site.name} for product design collaborations and personal growth.`,
 };
 
 export default function ContactPage() {

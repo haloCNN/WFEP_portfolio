@@ -1,7 +1,7 @@
 export const site = {
   name: "Cynthia Fung Sze Yan",
-  title: "多維體驗架構師",
-  tagline: "連結與療癒",
+  title: "Hybrid Alchemist",
+  tagline: "Get connect and healing",
   email: "halo_cynthia@yahoo.com.hk",
   location: "Hong Kong",
   year: new Date().getFullYear(),

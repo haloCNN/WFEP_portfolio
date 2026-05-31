@@ -14,7 +14,8 @@ export default function ProjectsPage() {
       <PageHero
         eyebrow="Work"
         title="Work"
-        description="以 Bento Grid 展示作品。滑鼠靠近後圖片會變暗並透明化，顯示簡介（先留空，之後你再補）。"
+        description="用理性與直覺，把訊息煉成會發光的設計"
+   
       />
       <section className="px-6 py-16 md:py-24">
         <WorkBentoGrid projects={projects} />
