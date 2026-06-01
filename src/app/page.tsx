@@ -1,4 +1,5 @@
 import { Button } from "@/components/Button";
+import { HomeHeroVisuals } from "@/components/HomeHeroVisuals";
 import { SectionHeading } from "@/components/SectionHeading";
 import { services, site } from "@/lib/site";
 
@@ -28,13 +29,17 @@ export default function HomePage() {
           }}
         />
         <div className="relative mx-auto max-w-6xl">
+          <div className="grid items-center gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(260px,320px)] lg:gap-16">
+            <div>
           <p className="inline-flex items-center gap-2 rounded-full border border-accent/20 bg-accent-soft px-4 py-1.5 text-xs font-medium text-accent">
             <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-accent" />
-            連結與療癒 · Modern Healing
+            Bonding · Modern Healing
           </p>
-          <h1 className="mt-8 max-w-4xl font-display text-[2.75rem] font-semibold leading-[1.05] tracking-tight text-ink text-balance sm:text-5xl md:text-6xl lg:text-7xl">
+          <h1 className="mt-8 max-w-4xl font-display text-[2rem] font-semibold leading-[1.2] tracking-tight text-ink text-balance sm:text-[2.25rem] md:text-4xl lg:text-5xl">
+     
             如果 AI 要取代人類，我大概是最後一個。因為它很難同時學會寫 Code、讀星盤，唱歌演戲和跟小孩與毛孩聊天。
           </h1>
+     
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink-muted md:text-xl">
             我是馮詩恩。一位融合科學邏輯、玄學、應用心理學洞察與 UI/UX 設計能力的體驗架構師。專注於為創新品牌提供具備情緒價值的產品與服務方案。
           </p>
@@ -44,12 +49,19 @@ export default function HomePage() {
               About me
             </Button>
           </div>
+            </div>
+
+            <div className="mx-auto w-full max-w-sm lg:max-w-none">
+              <HomeHeroVisuals />
+            </div>
+          </div>
+
           <dl className="mt-16 grid grid-cols-2 gap-8 border-t border-border pt-10 sm:grid-cols-4">
             {[
               { label: "核心訊息", value: site.tagline },
               { label: "核心優勢", value: "共情 × 理性" },
               { label: "斜槓身份", value: "多潛力" },
-              { label: "Based in", value: site.location },
+              { label: "位於", value: site.location },
             ].map((stat) => (
               <div key={stat.label}>
                 <dt className="text-xs uppercase tracking-[0.15em] text-ink-faint">
@@ -67,9 +79,10 @@ export default function HomePage() {
       <section className="border-y border-border bg-surface-elevated px-6 py-20 md:py-28">
         <div className="mx-auto max-w-6xl">
           <SectionHeading
-            eyebrow="Services"
-            title="How I help teams ship with confidence"
-            description="From discovery to polished UI—embedded with your squad or leading design workstreams."
+            eyebrow="服務"
+            title="我可以如何幫到你"
+            description="結合設計、教育、心理探索與直覺感知的跨界服務，幫助人更清晰地表達自己、理解自己，也更理解身邊的世界"
+       
           />
           <ul className="mt-14 grid gap-8 md:grid-cols-3">
             {services.map((service, i) => {
@@ -103,7 +116,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-6xl overflow-hidden rounded-3xl gradient-brand px-8 py-14 text-white shadow-xl shadow-accent/20 md:px-14 md:py-20">
           <div className="max-w-2xl">
             <p className="text-xs font-medium uppercase tracking-[0.2em] text-white/70">
-              Collaboration
+              WELCOME
             </p>
             <h2 className="mt-4 font-display text-3xl font-semibold tracking-tight md:text-4xl">
               從港鐵乘客、自閉症兒童到家裡那隻貓，沒有我讀不懂的用戶需求。

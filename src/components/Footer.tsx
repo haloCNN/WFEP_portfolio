@@ -7,10 +7,10 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-6 py-14">
         <div className="mb-12 overflow-hidden rounded-2xl gradient-brand p-6 text-white shadow-lg shadow-accent/15 md:p-8">
           <p className="text-xs font-medium uppercase tracking-[0.2em] text-white/70">
-            Final CTA
+            Core Message
           </p>
           <p className="mt-3 font-display text-xl font-semibold md:text-2xl">
-            從港鐵乘客、自閉症兒童到家裡那隻貓，沒有我讀不懂的用戶需求。
+            從乘客、自閉症兒童到家裡那隻貓，沒有我讀不懂的用戶需求。
           </p>
         </div>
         <div className="grid gap-10 md:grid-cols-[1.5fr_1fr_1fr]">

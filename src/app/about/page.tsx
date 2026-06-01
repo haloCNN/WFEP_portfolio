@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { Metadata } from "next";
 import { Button } from "@/components/Button";
 import { PageHero } from "@/components/PageHero";
@@ -46,6 +47,15 @@ const principles = [
   },
 ];
 
+const polaroidPhotos = [
+  { src: "/images/sea2.jpeg", alt: "Hi there! 🌊", rotate: "-6deg" },
+  { src: "/images/sports.jpeg", alt: "Stay active 💪", rotate: "4deg" },
+  { src: "/images/lobster.jpeg", alt: "Food is my life 🦞", rotate: "-3deg" },
+  { src: "/images/dog1.jpeg", alt: "Doggy time 🐾", rotate: "5deg" },
+  { src: "/images/cat1.jpeg", alt: "Purrfect ᨐฅ", rotate: "-4deg" },
+  { src: "/images/dog22.jpeg", alt: "Best buddies 🦴੯·̀͡⬮", rotate: "3deg" },
+];
+
 export default function AboutPage() {
   return (
     <>
@@ -53,44 +63,61 @@ export default function AboutPage() {
         eyebrow="About"
         title={`Hi, I'm ${site.name.split(" ")[0]}.`}
         description="擁有工程師的腦，藝術家的心，占星師的直覺，還有一顆永遠好奇、永遠想嘗試新身份的靈魂。"
-   
       />
 
+      {/* === 自我介紹 + 拍立得照片牆 === */}
       <section className="px-6 py-16 md:py-24">
-        <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[280px_1fr]">
-          <div
-            className="aspect-[4/5] max-w-sm rounded-2xl border border-border lg:max-w-none"
-            style={{
-              background:
-                "linear-gradient(160deg, var(--color-accent-soft), var(--color-accent-soft-secondary), var(--color-accent-soft-tertiary))",
-            }}
-            aria-hidden
-          />
+        <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-2 lg:items-center">
+          {/* 文字區塊 */}
           <div className="max-w-2xl space-y-6 text-lg leading-relaxed text-ink-muted">
             <p>
               我的構造可能有點特別：腦子裝著『生醫工程與環境科學』的理科魂、把關安全的『職安健教育主任』，以及看透人心的『應用心理學與NLP教練』資格；內心則住著感性的『音樂劇演員』、神秘的『占星師』與『動物傳心師』，還有充滿愛心的『SEN兒童導師』。
-         
             </p>
             <p>
-               你問我現在主要在做什麼？我目前正戴著『客戶服務助理』和『菜鳥UI設計師』的帽子，偶爾兼職做個美感爆棚的『海報與PPT設計師』。
-         
-        
+              你問我現在主要在做什麼？我目前正戴著『客戶服務助理』和『菜鳥UI設計師』的帽子，偶爾兼職做個美感爆棚的『海報與PPT設計師』。
             </p>
             <p>
               從科學到玄學，從人類到動物，從理智到藝術，認識我一個，等於認識了一個團隊！
-         
             </p>
-            <Button href="/contact" className="!mt-4">
+            <Button href="/contact" className="!mt-6">
               聯絡我
             </Button>
+          </div>
+          {/* 拍立得照片牆 */}
+          <div className="relative">
+            <div className="grid grid-cols-2 gap-6 md:gap-8">
+              {polaroidPhotos.map((photo, index) => (
+                <div
+                  key={photo.src}
+                  className="group relative aspect-[2/3] overflow-hidden rounded-xl border-8 border-white bg-white shadow-xl transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl"
+                  style={{
+                    transform: `rotate(${photo.rotate})`,
+                  }}
+                >
+                  <Image
+                    src={photo.src}
+                    alt={photo.alt}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    sizes="(max-width: 768px) 50vw, 33vw"
+                  />
+                  {/* 照片下方白色區域（模擬真實拍立得） */}
+                  <div className="absolute bottom-0 left-0 right-0 h-10 bg-white pt-2 text-center">
+                    <p className="text-[10px] font-medium text-gray-500 tracking-wider">
+                      {photo.alt}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
+      {/* How I Work */}
       <section className="border-y border-border bg-surface-elevated px-6 py-16 md:py-24">
         <div className="mx-auto max-w-6xl">
           <h2 className="font-display text-3xl font-semibold text-ink">How I Work</h2>
-     
           <ul className="mt-12 grid gap-8 md:grid-cols-3">
             {principles.map((p, i) => {
               const styles = [
@@ -99,17 +126,18 @@ export default function AboutPage() {
                 { bg: "bg-accent-soft-tertiary", border: "border-accent-tertiary/20", dot: "border-accent-tertiary" },
               ][i % 3];
               return (
-              <li key={p.title} className={`rounded-2xl border ${styles.border} ${styles.bg} p-8`}>
-                <span className={`mb-4 inline-block h-2 w-2 rounded-full border-2 ${styles.dot} bg-surface-elevated`} />
-                <h3 className="font-display text-lg font-semibold text-ink">{p.title}</h3>
-                <p className="mt-3 text-sm leading-relaxed text-ink-muted">{p.body}</p>
-              </li>
-            );
+                <li key={p.title} className={`rounded-2xl border ${styles.border} ${styles.bg} p-8`}>
+                  <span className={`mb-4 inline-block h-2 w-2 rounded-full border-2 ${styles.dot} bg-surface-elevated`} />
+                  <h3 className="font-display text-lg font-semibold text-ink">{p.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-ink-muted">{p.body}</p>
+                </li>
+              );
             })}
           </ul>
         </div>
       </section>
 
+      {/* Background */}
       <section className="px-6 py-16 md:py-24">
         <div className="mx-auto max-w-6xl">
           <h2 className="font-display text-3xl font-semibold text-ink">Background</h2>
@@ -130,11 +158,12 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* Toolbox */}
       <section className="px-6 pb-20">
         <div className="mx-auto max-w-6xl rounded-2xl border border-accent-secondary/20 bg-accent-soft-secondary p-8 md:p-10">
           <h2 className="font-display text-xl font-semibold text-ink">Toolbox</h2>
           <p className="mt-4 text-ink-muted">
-            Figma · Cursor · Canva · Blender · PowerPoint 
+            Figma · Cursor · Canva · Blender · PowerPoint
           </p>
         </div>
       </section>
