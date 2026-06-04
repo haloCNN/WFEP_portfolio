@@ -35,10 +35,26 @@ export default function HomePage() {
             <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-accent" />
             Bonding · Modern Healing
           </p>
-          <h1 className="mt-8 max-w-4xl font-display text-[2rem] font-semibold leading-[1.2] tracking-tight text-ink text-balance sm:text-[2.25rem] md:text-4xl lg:text-5xl">
+          <div className="mt-8 max-w-4xl">
+
+            <h1 className="font-display text-[2.25rem] font-semibold leading-[1.15] tracking-[-0.02em] text-ink sm:text-5xl lg:text-[3.5rem]">
+              如果 AI 要取代人類，
+              <br className="hidden sm:block" />
+              我大概是最後一個。
+            </h1>
+
+            <p className="mt-6 max-w-3xl text-[1.1rem] leading-relaxed text-ink-muted sm:text-xl md:text-[1.35rem]">
+              因為它很難同時學會{" "}
+              <span className="font-medium text-accent-warm">寫 Code</span>、
+              <span className="font-medium text-accent-secondary">讀星盤</span>，
+              <br className="hidden md:block" />
+              <span className="font-medium text-accent-tertiary">談科學</span>{" "}
+              和{" "}
+              <span className="font-medium text-accent">跟小孩與毛孩聊天</span>。
+            </p>
+
+          </div>
      
-            如果 AI 要取代人類，我大概是最後一個。因為它很難同時學會寫 Code、讀星盤，唱歌演戲和跟小孩與毛孩聊天。
-          </h1>
      
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink-muted md:text-xl">
             我是馮詩恩。一位融合科學邏輯、玄學、應用心理學洞察與 UI/UX 設計能力的體驗架構師。專注於為創新品牌提供具備情緒價值的產品與服務方案。

@@ -1,4 +1,4 @@
-cyn # WFEP — UI/UX Designer Portfolio
+ # WFEP — UI/UX Designer Portfolio
 
 A modern Next.js portfolio for showcasing product design work, process, and contact.
 
